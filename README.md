@@ -2,7 +2,7 @@
 
 ### 1. 基本操作
 
-* export 
+* export
 
 展示全部的环境变量，如果你想获取某个特殊的变量，用 `echo $变量名`
 ![](./img/export.jpg)
@@ -82,9 +82,82 @@
 
 ### 3. 文本操作
 
+* awk
 
+非常有用的一个文本处理命令，逐行运行，默认使用空格分割，`-F`表示分割的样式
+![](./img/etc:passwd.jpg)
+![](./img/awk.jpg)
 
+* grep
 
+匹配正则表达式的文本行，并输出，`-E`正则模糊匹配 `-F`精确字母匹配 `-w`精确单词匹配
+![](./img/grep.jpg)
+![](./img/grep_w.jpg)
 
+* sed
+
+正则替换
+![](./img/sed.jpg)
+
+* sort
+
+排序
+![](./img/sort.jpg)
+
+* wc
+
+统计文本行数，单词数，字符数
+![](./img/wc.jpg)
+
+### 3. 目录操作
+
+* cd
+
+进入目录
+
+* mkdir
+
+创建目录
+
+* pwd
+
+当前目录的路径
+![](./img/mkdir.jpg)
+
+### 4. SSH,系统信息，网络操作
+
+* cal
+
+月历
+![](./img/cal.jpg)
+
+* date
+
+当前日期和时间
+![](./img/date.jpg)
+
+* df
+
+磁盘使用情况
+
+* du
+
+文件或目录使用情况
+![](./img/du.jpg)
+
+* ps
+
+列出你的进程
+![](./img/ps.jpg)
+
+* ssh
+
+远程连接
+![](./img/ssh.jpg)
+
+* top
+
+列出当然活动进程
+![](./img/top.jpg)
 
 [1]:http://omgzui.pub/linux
