@@ -168,10 +168,9 @@
 
 #### 1.1 test判断语句
 
-test是关键字，表示判断；
-EXPRESSION是被判断的语句。
-
+test是关键字，表示判断；EXPRESSION是被判断的语句。
 ![](./img/testEx.jpg)
+
 `echo $?` 输出判断结果，0表示成功，其他表示失败。
 ![](./img/test.jpg)
 
