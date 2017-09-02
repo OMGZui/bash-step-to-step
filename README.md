@@ -183,9 +183,9 @@ test是关键字，表示判断；EXPRESSION是被判断的语句。
 #### 1.2 []条件判断
 
 中括号的左右扩弧和EXPRESSION之间都必须有空格！
-![](./img/[].jpg)
+![](./img/[1].jpg)
 文件类型判断
-![](./img/[  ].jpg)
+![](./img/[2].jpg)
 字符串和数字判断
 ![](./img/string-integer.jpg)
 
