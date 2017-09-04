@@ -450,14 +450,57 @@ exit 0
 
 ```sh
 选项与参数:
--n :不要执行 script,仅查询语法的问题;
--v :再执行 sccript 前,先将 scripts 的内容输出到屏幕上;
--x :将使用到的 script 内容显示到屏幕上,这是很有用的参数!
+-n: 不要执行 script,仅查询语法的问题;
+-v: 再执行 sccript 前,先将 scripts 的内容输出到屏幕上;
+-x: 将使用到的 script 内容显示到屏幕上,这是很有用的参数!
 ```
 
-实例：想要执行bash脚本，并查看bash的调用流程，可以通过以下命令：
+例子：想要执行bash脚本，并查看bash的调用流程，可以通过以下命令：
 
 `bash -x test.sh`
+
+* echo [-neE] string
+
+```sh
+选项与参数:
+-n: 输出内容之后，不换行。默认是输入内容之后，换行。
+-e: 开启反斜线“\”转义功能
+-E: 开启反斜线“\”转义功能（默认）。
+```
+
+例子：输出please input a number:之后不换行
+
+`echo -n "please input a number:"`
+
+## 9. bash内建指令
+
+* echo
+
+在屏幕上显示出指定的字串
+
+* read
+
+从标准输入设备读入一行，分解成若干字，赋值给bash程序内部定义的变量
+
+* alias
+
+别名,`alias l='ls -al'`
+
+* export
+
+export可以把bash的变量向下带入子bash(即子bash中可以使用父bash的变量)，从而让子进程继承父进程中的环境变量。但子bash不能用export把它的变量向上带入父bash。
+
+* exec
+
+当bash执行到exec语句时，不会去创建新的子进程，而是转去执行指定的命令，当指定的命令执行完时，该进程（也就是最初的bash）就终止了，所以bash程序中exec后面的语句将不再被执行。
+
+* .
+
+使bash读入指定的bash程序文件并依次执行文件中的所有语句。
+
+* exit
+
+退出Shell程序，在exit之后可有选择地指定一个数位作为返回状态。
 
 [1]:http://omgzui.pub/linux
 [2]:./dir/array.sh
