@@ -66,6 +66,7 @@
         - [exec](#exec)
         - [.](#)
         - [exit](#exit)
+    - [十. 参考资料](#十-参考资料)
 
 <!-- /TOC -->
 
@@ -571,8 +572,17 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 
 退出Shell程序，在exit之后可有选择地指定一个数位作为返回状态。
 
-[1]:http://omgzui.pub/linux
+## 十. 参考资料
+
+- [Linux bash总结(一) 基础部分(适合初学者学习和非初学者参考)][6]
+- [bash-guide][7]
+- [ssr.sh][8]
+
+[1]:./linux-user-group-file.sh
 [2]:./dir/array.sh
 [3]:./dir/function.sh
 [4]:./dir/operation.sh
 [5]:./dir/string.sh
+[6]:http://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html
+[7]:https://github.com/Idnan/bash-guide
+[8]:https://doub.bid/ss-jc42/
