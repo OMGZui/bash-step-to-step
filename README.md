@@ -69,6 +69,7 @@
         - [.](#)
         - [exit](#exit)
     - [十. 参考资料](#十-参考资料)
+    - [十一. 大BOSS](#十一-大boss)
 
 <!-- /TOC -->
 
@@ -686,6 +687,10 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 - [ssr.sh][8]
 - [Markdown-TOC][9]
 
+## 十一. 大BOSS
+
+[大BOSS][10]
+
 [1]:./linux-user-group-file.md
 [2]:./dir/array.sh
 [3]:./dir/function.sh
@@ -695,3 +700,4 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 [7]:https://github.com/Idnan/bash-guide
 [8]:https://doub.bid/ss-jc42/
 [9]:https://github.com/AlanWalk/Markdown-TOC
+[10]:./ssr.sh
