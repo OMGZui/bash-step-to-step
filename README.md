@@ -577,6 +577,7 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 - [Linux bash总结(一) 基础部分(适合初学者学习和非初学者参考)][6]
 - [bash-guide][7]
 - [ssr.sh][8]
+- [Markdown-TOC][9]
 
 [1]:./linux-user-group-file.sh
 [2]:./dir/array.sh
@@ -586,3 +587,4 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 [6]:http://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html
 [7]:https://github.com/Idnan/bash-guide
 [8]:https://doub.bid/ss-jc42/
+[8]:https://github.com/AlanWalk/Markdown-TOC
