@@ -1,5 +1,7 @@
 # bash 跟着敲
 
+前言：大家觉得有用的话，star一下，然后可以随意分享给需要的人，重点是加颗星星哦，加颗星星哦，加颗星星哦。
+
 <!-- TOC -->
 
 - [bash 跟着敲](#bash-跟着敲)
@@ -460,9 +462,76 @@ array[4]=50
 
 [数组操作][2]
 
+```sh
+#!/bin/bash
+
+array=(10 20 30 40 50)
+
+# 显示数组中所有元素
+echo '显示数组中所有元素'
+echo ${array[*]}
+echo ${array[@]}
+
+# 显示数组第2项
+echo '显示数组第2项'
+echo ${array[1]}
+
+# 显示数组长度
+echo '显示数组长度'
+echo ${#array[@]}
+
+# 输出数组的第1-3项
+echo '输出数组的第1-3项'
+echo ${array[@]:0:3}
+
+# 将数组中的0替换成1
+echo '将数组中的0替换成1'
+echo ${array[@]/0/1}
+
+# 删除数组第2项元素  
+# 说明：
+# unset仅仅只清除array[1]的值，并没有将array[1]删除掉
+echo '删除数组第2项元素'
+unset array[1]
+echo ${array[@]}
+
+exit 0
+```
+
 ## 五.函数
 
 [函数实例][3]
+
+```sh
+#!/bin/bash
+
+# 编辑一个函数foo：打印foo的输入参数的总数，并输入每个参数和参数对应的序号。
+function foo()
+{
+    # 定义局部变量i
+    local i=0 
+    # 定义局部变量total=传入foo的参数总数
+    local total=$#
+    # 输出参数总数
+    echo "total param =$total"
+    # 输出传入foo的每一个参数
+    for val in $@
+    do
+        ((i++))
+        echo "$i -- val=$val"
+    done
+
+    # 返回参数总数
+    return $total
+}
+
+foo
+foo param1 param2 param3
+# 输出foo param1 param2 param3的返回值
+echo "return value=$?"
+
+exit 0
+```
 
 ## 六.数值运算
 
@@ -513,6 +582,42 @@ exit 0
 ## 七. 字符运算
 
 [字符运算][5]
+
+```sh
+#!/bin/bash
+
+str='hello world'
+
+# 显示字符串
+echo '显示字符串'
+echo ${str}
+
+# 显示字符串长度
+echo '显示字符串长度'
+echo ${#str}
+
+# 提取world
+echo '提取world'
+echo ${str:6}
+
+# 提取or
+echo '提取or'
+echo ${str:7:2}
+
+# 删除hello
+echo '删除hello'
+echo ${str#hello}
+
+# 删除world
+echo '删除world'
+echo ${str%world}
+
+# 将所有的字符l替换为m
+echo '将所有的字符l替换为m'
+echo ${str//l/m}
+
+exit 0
+```
 
 ## 八. bash调试
 
@@ -573,6 +678,8 @@ export可以把bash的变量向下带入子bash(即子bash中可以使用父bash
 退出Shell程序，在exit之后可有选择地指定一个数位作为返回状态。
 
 ## 十. 参考资料
+
+后语：大家觉得有用的话，star一下，然后可以随意分享给需要的人，重点是加颗星星哦，加颗星星哦，加颗星星哦。
 
 - [Linux bash总结(一) 基础部分(适合初学者学习和非初学者参考)][6]
 - [bash-guide][7]

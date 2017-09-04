@@ -30,3 +30,4 @@ echo '删除数组第2项元素'
 unset array[1]
 echo ${array[@]}
 
+exit 0
