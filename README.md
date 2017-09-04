@@ -6,10 +6,40 @@
     - [1. 硬件、内核、shell](#1-硬件内核shell)
     - [2. 命令行](#2-命令行)
         - [1. 基本操作](#1-基本操作)
+            - [export](#export)
+            - [whatis](#whatis)
+            - [whereis](#whereis)
+            - [which](#which)
+            - [clear](#clear)
         - [2. 文件操作](#2-文件操作)
+            - [cat](#cat)
+            - [chmod](#chmod)
+            - [cp](#cp)
+            - [diff](#diff)
+            - [find](#find)
+            - [head](#head)
+            - [ls](#ls)
+            - [mv](#mv)
+            - [rm](#rm)
+            - [touch](#touch)
         - [3. 文本操作](#3-文本操作)
+            - [awk](#awk)
+            - [grep](#grep)
+            - [sed](#sed)
+            - [sort](#sort)
+            - [wc](#wc)
         - [4. 目录操作](#4-目录操作)
+            - [cd](#cd)
+            - [mkdir](#mkdir)
+            - [pwd](#pwd)
         - [5. SSH,系统信息，网络操作](#5-ssh系统信息网络操作)
+            - [cal](#cal)
+            - [date](#date)
+            - [df](#df)
+            - [du](#du)
+            - [ps](#ps)
+            - [ssh](#ssh)
+            - [top](#top)
     - [3. 语法](#3-语法)
         - [1 条件判断](#1-条件判断)
             - [1.1 test判断语句](#11-test判断语句)
@@ -26,7 +56,16 @@
     - [6.数值运算](#6数值运算)
     - [7. 字符运算](#7-字符运算)
     - [8.bash调试](#8bash调试)
+        - [bash [-nvx] scripts.sh](#bash--nvx-scriptssh)
+        - [echo [-neE] string](#echo--nee-string)
     - [9. bash内建指令](#9-bash内建指令)
+        - [echo](#echo)
+        - [read](#read)
+        - [alias](#alias)
+        - [export](#export-1)
+        - [exec](#exec)
+        - [.](#)
+        - [exit](#exit)
 
 <!-- /TOC -->
 
@@ -39,160 +78,160 @@
 
 ### 1. 基本操作
 
-* export
+#### export
 
 展示全部的环境变量，如果你想获取某个特殊的变量，用 `echo $变量名`
 ![](./img/export.jpg)
 ![](./img/echo.jpg)
 
-* whatis
+#### whatis
 
 展示用户命令，系统调用、库函数等
 ![](./img/whatis.png)
 
-* whereis
+#### whereis
 
 搜索可执行文件、源文件
 ![](./img/whereis.png)
 
-* which
+#### which
 
 在环境变量中搜索可执行文件，并打印完整路径
 ![](./img/which.jpg)
 
-* clear
+#### clear
 
 清空屏幕
 ![](./img/clear.png)
 
 ### 2. 文件操作
 
-* cat
+#### cat
 
 在屏幕上显示文本文件
 ![](./img/cat.jpg)
 
-* chmod
+#### chmod
 
 可以改变文件和目录的读、写、执行权限
 [linux 中的用户、组、文件][1]
 
-* cp
+#### cp
 
 复制文件
 ![](./img/copy.jpg)
 
-* diff
+#### diff
 
 比较文件，我在上面复制的文件中加了一行diff
 ![](./img/diff.jpg)
 
-* find
+#### find
 
 查找文件，可以通过正则来查
 ![](./img/find.jpg)
 
-* head
+#### head
 
 查看文件前10行
 ![](./img/head.jpg)
 
-* ls
+#### ls
 
 显示所有文件，`-l`显示长格式化 `-a`显示包括隐藏文件
 ![](./img/ls.jpg)
 
-* mv
+#### mv
 
 移动文件，同时也可以重命名文件
 ![](./img/mv.jpg)
 
-* rm
+#### rm
 
 删除文件，`-r`删除目录 `-f`强制删除
 ![](./img/rm.jpg)
 
-* touch
+#### touch
 
 创建新文件
 ![](./img/touch.jpg)
 
 ### 3. 文本操作
 
-* awk
+#### awk
 
 非常有用的一个文本处理命令，逐行运行，默认使用空格分割，`-F`表示分割的样式
 ![](./img/etc:passwd.jpg)
 ![](./img/awk.jpg)
 
-* grep
+#### grep
 
 匹配正则表达式的文本行，并输出，`-E`正则模糊匹配 `-F`精确字母匹配 `-w`精确单词匹配
 ![](./img/grep.jpg)
 ![](./img/grep_w.jpg)
 
-* sed
+#### sed
 
 正则替换
 ![](./img/sed.jpg)
 
-* sort
+#### sort
 
 排序
 ![](./img/sort.jpg)
 
-* wc
+#### wc
 
 统计文本行数，单词数，字符数
 ![](./img/wc.jpg)
 
 ### 4. 目录操作
 
-* cd
+#### cd
 
 进入目录
 
-* mkdir
+#### mkdir
 
 创建目录
 
-* pwd
+#### pwd
 
 当前目录的路径
 ![](./img/mkdir.jpg)
 
 ### 5. SSH,系统信息，网络操作
 
-* cal
+#### cal
 
 月历
 ![](./img/cal.jpg)
 
-* date
+#### date
 
 当前日期和时间
 ![](./img/date.jpg)
 
-* df
+#### df
 
 磁盘使用情况
 
-* du
+#### du
 
 文件或目录使用情况
 ![](./img/du.jpg)
 
-* ps
+#### ps
 
 列出你的进程
 ![](./img/ps.jpg)
 
-* ssh
+#### ssh
 
 远程连接
 ![](./img/ssh.jpg)
 
-* top
+#### top
 
 列出当然活动进程
 ![](./img/top.jpg)
@@ -400,11 +439,11 @@ exit 0
 
 ### 1 数组定义
 
-* array=(10 20 30 40 50)
+- array=(10 20 30 40 50)
 
 一对括号表示是数组，数组元素用“空格”符号分割开。引用数组时从序号0开始。
 
-* 除了上面的定义方式外，也可以单独定义数组：
+- 除了上面的定义方式外，也可以单独定义数组：
 
 ```sh
 array[0]=10
@@ -414,7 +453,7 @@ array[3]=40
 array[4]=50
 ```
 
-* var="10 20 30 40 50"; array=($var)
+- var="10 20 30 40 50"; array=($var)
 
 ### 2 数组操作
 
@@ -476,7 +515,7 @@ exit 0
 
 ## 8.bash调试
 
-* bash [-nvx] scripts.sh
+### bash [-nvx] scripts.sh
 
 ```sh
 选项与参数:
@@ -489,7 +528,7 @@ exit 0
 
 `bash -x test.sh`
 
-* echo [-neE] string
+### echo [-neE] string
 
 ```sh
 选项与参数:
@@ -504,31 +543,31 @@ exit 0
 
 ## 9. bash内建指令
 
-* echo
+### echo
 
 在屏幕上显示出指定的字串
 
-* read
+### read
 
 从标准输入设备读入一行，分解成若干字，赋值给bash程序内部定义的变量
 
-* alias
+### alias
 
 别名,`alias l='ls -al'`
 
-* export
+### export
 
 export可以把bash的变量向下带入子bash(即子bash中可以使用父bash的变量)，从而让子进程继承父进程中的环境变量。但子bash不能用export把它的变量向上带入父bash。
 
-* exec
+### exec
 
 当bash执行到exec语句时，不会去创建新的子进程，而是转去执行指定的命令，当指定的命令执行完时，该进程（也就是最初的bash）就终止了，所以bash程序中exec后面的语句将不再被执行。
 
-* .
+### .
 
 使bash读入指定的bash程序文件并依次执行文件中的所有语句。
 
-* exit
+### exit
 
 退出Shell程序，在exit之后可有选择地指定一个数位作为返回状态。
 
