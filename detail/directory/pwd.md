@@ -3,10 +3,12 @@
 ## 选项参数 -- options
 
 - -L, --logical 逻辑路径  默认的
+
         use PWD from environment, even if it contains symlinks
         在当前环境使用pwd，包括符号连接
 
 - -P, --physical 物理路径
+
         avoid all symlinks
         忽略全部的符号连接
 
