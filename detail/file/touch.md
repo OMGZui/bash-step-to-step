@@ -1,4 +1,4 @@
-# touch - change file timestamps
+# touch - change file timestamps 改变文件的时间戳
 
 ## 选项参数 -- options
 
@@ -34,7 +34,7 @@ touch 2018步兵排名.md 2018骑兵排名.md
 -rw-r--r--   1 shengj  staff     0B  1 17 11:06 2018骑兵排名.md
 ```
 
-### Use this file's times instead of current time
+### Use this file's times instead of current time 使用该文件的时间而不是当前时间
 
 ```bash
 # update file timestamps
@@ -48,7 +48,7 @@ touch -r 2018步兵排名.md 2018骑兵排名.md
 
 ```
 
-### use [[CC]YY]MMDDhhmm[.ss] instead of current time
+### use [[CC]YY]MMDDhhmm[.ss] instead of current time 使用[[CC]YY]MMDDhhmm[.ss] 格式代替当前时间
 
 ```bash
 touch -t 201801171000.20 2018步兵排名.md
