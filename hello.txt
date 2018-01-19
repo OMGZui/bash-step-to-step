@@ -4,7 +4,7 @@ consetetur
 sadipscing elitr,
 sed diam nonumy
 eirmod tempor
-foo (Lorem|dolor) 
+foo (Lorem|dolor)
 invidunt ut labore
 et dolore magna
 aliquyam erat, sed
