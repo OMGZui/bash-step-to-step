@@ -17,7 +17,7 @@
     -w, --word-regexp 精确单词匹配
             Select only those lines containing matches that form whole words.  The test is that the matching substring must either be at the beginning of the line, or preceded by a non-word constituent  character.   Similarly,  it  must be either at the end of the line or followed by a non-word constituent character.  Word-constituent characters are letters, digits, and the underscore.
             只选择包含构成整个单词的匹配的那些行。 测试是匹配子字符串必须位于行首，或者以非单字组成字符开头。 同样，它
-             必须在行尾，或者跟随一个非单词组成字符。 单词组成字符是字母，数字和下划线。
+            必须在行尾，或者跟随一个非单词组成字符。 单词组成字符是字母，数字和下划线。
 
     -c, --count
             Suppress normal output; instead print a count of matching lines for each input file. 
