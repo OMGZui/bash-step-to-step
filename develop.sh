@@ -11,7 +11,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 # 确保是root用户
-if [[ $(id -u) != "0" ]]; then
+if [[ `id -u` != "0" ]]; then
     echo "请使用root用户"
     exit 1
 fi
@@ -23,7 +23,7 @@ apt -y update && apt -y upgrade
 apt -y install git
 
 # oh-my-zsh
-apt -y install zsh wget
+apt -y install zsh wget curl
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 zsh
 
@@ -55,3 +55,11 @@ export NVM_DIR="$HOME/.nvm"
 command -v nvm
 nvm install 8
 nvm use 8
+
+# 启动
+seservice nginx start
+seservice mysql start
+seservice php7.2-fpm start
+
+# zsh
+zsh
