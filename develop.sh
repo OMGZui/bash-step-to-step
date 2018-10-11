@@ -11,7 +11,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 # 确保是root用户
-if [ $(id -u) != "0" ]; then
+if [[ $(id -u) != "0" ]]; then
     echo "请使用root用户"
     exit 1
 fi
