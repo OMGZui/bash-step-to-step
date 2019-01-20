@@ -57,9 +57,9 @@ nvm install 8
 nvm use 8
 
 # 启动
-seservice nginx start
-seservice mysql start
-seservice php7.2-fpm start
+service nginx start
+service mysql start
+service php7.2-fpm start
 
 # zsh
 zsh
